@@ -13,7 +13,7 @@
             <ColumnDefinition Width="199*"/>
 
         </Grid.ColumnDefinitions>
-        <Button x:Name="start_recording_button" Content="Iniciar Grabación" Margin="42,204,346,223" FontFamily="Microsoft JhengHei" FontWeight="Bold" Click="start_recording_button_Click"/>
+        <Button x:Name="start_recording_button" Content="Iniciar Grabación" Margin="42,204,346,223" FontFamily="Microsoft JhengHei" FontWeight="Bold" Click="Start_recording_button_Click"/>
         <ProgressBar Margin="42,25,14,359"/>
         <Grid HorizontalAlignment="Left" Height="470" VerticalAlignment="Center" Width="192" Grid.Column="1" Margin="7,0,0,0">
             <Rectangle HorizontalAlignment="Left" Height="470" Margin="-2,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="183"/>
@@ -26,8 +26,8 @@
             <TextBlock x:Name="summary_text" HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="100" Width="157" Foreground="#FF948A8A" FontWeight="Bold"><Run Language="es-mx" Text="Resumen aquí..."/></TextBlock>
             <Canvas x:Name="color_canva" Height="58" Margin="10,196,19,216" Width="163" Background="#FFFBF4F4"/>
         </Grid>
-        <Button x:Name="stop_recording_button" Content="Detener Grabación" Margin="374,199,14,228" FontFamily="Microsoft JhengHei" IsEnabled="False" FontWeight="Bold" Click="stop_recording_button_Click"/>
-        <Button x:Name="play_recording_button" Content="Reproducir Grabación" Margin="208,305,180,122" FontFamily="Microsoft JhengHei"  IsEnabled="False" FontWeight="Bold" Click="play_recording_button_Click"/>
+        <Button x:Name="stop_recording_button" Content="Detener Grabación" Margin="374,199,14,228" FontFamily="Microsoft JhengHei" IsEnabled="False" FontWeight="Bold" Click="Stop_recording_button_Click"/>
+        <Button x:Name="play_recording_button" Content="Reproducir Grabación" Margin="208,305,180,122" FontFamily="Microsoft JhengHei"  IsEnabled="False" FontWeight="Bold" Click="Play_recording_button_Click"/>
         <Label x:Name="time_ellapsed" Content="00:00" HorizontalAlignment="Left" Margin="288,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
 
     </Grid>
