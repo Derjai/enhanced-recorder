@@ -1,13 +1,5 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+﻿using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace enhanced_recorder
 {
@@ -17,7 +9,7 @@ namespace enhanced_recorder
     public partial class MainWindow : Window
     {
         private bool _checkBoxState;
-        private Color _color;
+        private Brush _color = Brushes.Blue;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,14 +21,35 @@ namespace enhanced_recorder
             {
                 case true:
                     _checkBoxState = true;
-                    _color = Colors.Green;
+                    _color = Brushes.Green;
                     break;
                 case false:
                     _checkBoxState = false;
-                    _color = Colors.Red;
+                    _color = Brushes.Red;
                     break;
             }
             this.summary_text.Text = $"{_checkBoxState}";
+            this.color_canva.Background = _color;
+        }
+
+        private void SetDate_Tomorrow() 
+        {
+            this.date_picker.SelectedDate = new DateTime().AddDays(1);
+        }
+
+        private void start_recording_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void stop_recording_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void play_recording_button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
