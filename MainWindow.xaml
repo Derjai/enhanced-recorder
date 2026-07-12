@@ -13,12 +13,12 @@
             <ColumnDefinition Width="199*"/>
 
         </Grid.ColumnDefinitions>
-        <Button x:Name="start_recording_button" Content="Iniciar Grabación" Margin="42,204,346,223" FontFamily="Microsoft JhengHei" Click="play_button_Click" FontWeight="Bold"/>
+        <Button x:Name="start_recording_button" Content="Iniciar Grabación" Margin="42,204,346,223" FontFamily="Microsoft JhengHei" FontWeight="Bold" Click="Start_recording_button_Click"/>
         <ProgressBar Margin="42,25,14,359"/>
         <Grid HorizontalAlignment="Left" Height="470" VerticalAlignment="Center" Width="192" Grid.Column="1" Margin="7,0,0,0">
             <Rectangle HorizontalAlignment="Left" Height="470" Margin="-2,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="183"/>
             <Calendar x:Name="date_picker" HorizontalAlignment="Left" Margin="8,288,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="172" Width="167"/>
-            <CheckBox Content="Ocultar " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" FontWeight="Bold"/>
+            <CheckBox x:Name="showMenu_checkBox" Content="Ocultar " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Checked="OnCheckBoxState_Changed" Unchecked="OnCheckBoxState_Changed"/>
             <Rectangle x:Name="summary_block" HorizontalAlignment="Left" Height="100" Margin="8,62,0,0" Stroke="Black" VerticalAlignment="Top" Width="163"/>
             <TextBlock x:Name="summary_label" HorizontalAlignment="Left" Margin="119,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"><Run Language="es-mx" Text="Resumen"/></TextBlock>
             <TextBlock x:Name="color_change_label" HorizontalAlignment="Left" Margin="88,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" FontWeight="Bold"><Run Language="es-mx" Text="Cambiar Color"/></TextBlock>
@@ -26,8 +26,8 @@
             <TextBlock x:Name="summary_text" HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="100" Width="157" Foreground="#FF948A8A" FontWeight="Bold"><Run Language="es-mx" Text="Resumen aquí..."/></TextBlock>
             <Canvas x:Name="color_canva" Height="58" Margin="10,196,19,216" Width="163" Background="#FFFBF4F4"/>
         </Grid>
-        <Button x:Name="stop_recording_button" Content="Detener Grabación" Margin="374,199,14,228" FontFamily="Microsoft JhengHei" Click="play_button_Click" IsEnabled="False" FontWeight="Bold"/>
-        <Button x:Name="play_recording_button" Content="Reproducir Grabación" Margin="208,305,180,122" FontFamily="Microsoft JhengHei" Click="play_button_Click" IsEnabled="False" FontWeight="Bold"/>
+        <Button x:Name="stop_recording_button" Content="Detener Grabación" Margin="374,199,14,228" FontFamily="Microsoft JhengHei" IsEnabled="False" FontWeight="Bold" Click="Stop_recording_button_Click"/>
+        <Button x:Name="play_recording_button" Content="Reproducir Grabación" Margin="208,305,180,122" FontFamily="Microsoft JhengHei"  IsEnabled="False" FontWeight="Bold" Click="Play_recording_button_Click"/>
         <Label x:Name="time_ellapsed" Content="00:00" HorizontalAlignment="Left" Margin="288,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
 
     </Grid>
