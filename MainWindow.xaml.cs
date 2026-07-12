@@ -16,9 +16,27 @@ namespace enhanced_recorder
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool _checkBoxState;
+        private Color _color;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OnCheckBoxState_Changed(object sender, RoutedEventArgs e) 
+        {
+            switch (this.showMenu_checkBox.IsChecked)
+            {
+                case true:
+                    _checkBoxState = true;
+                    _color = Colors.Green;
+                    break;
+                case false:
+                    _checkBoxState = false;
+                    _color = Colors.Red;
+                    break;
+            }
+            this.summary_text.Text = $"{_checkBoxState}";
         }
     }
 }
